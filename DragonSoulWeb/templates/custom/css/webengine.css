@@ -1,0 +1,593 @@
+.admincp-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #ffffff !important;
+	border: 2px solid #000000 !important;
+	color: #000000 !important;
+	font-weight: bold !important;
+}
+
+.page-title {
+	position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #f4b7fb;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.btn {
+    border: none !important;
+    width: auto;
+    padding: 20px !important;
+/*    background: rgb(107, 62, 95, 0.619) !important;*/
+    background: rgb(107, 62, 95, 0.9) !important;
+    border-radius: 5px !important;
+    color: white !important;
+    height: 5px;
+    line-height: 0px;
+}
+
+/* NEWS MODULE */
+.panel-news {
+	margin-bottom: 30px;
+	color: #333;
+	border: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 0 10px #e3e3e3;
+	-webkit-box-shadow: 0 0 10px #e3e3e3;
+	box-shadow: 0 0 10px #e3e3e3;
+}
+.panel-news .panel-heading {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #ffefef;
+}
+.panel-news .panel-title {
+	color: #f4b7fb;
+}
+.panel-news .panel-footer {
+	border-top: 1px solid #e7e7e7;
+	background: #fff;
+	font-style: italic;
+	font-size: 11px;
+	height: 40px;
+	color: #777;
+}
+
+/* RANKINGS MODULE */
+.rankings-table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.rankings-class-image {
+	width: 30px;
+	height: auto;
+	-moz-box-shadow: 0 0 5px #666;
+	-webkit-box-shadow: 0 0 5px #666;
+	box-shadow: 0 0 5px #666;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.rankings-table tr td {
+	padding: 10px;
+	font-size: 18px;
+	vertical-align: middle !important;
+	text-align: center;
+}
+.rankings-table-place {
+	color: #666;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+table tr td {
+    font-size: 14px !important;
+}
+table tr:nth-child(odd) {
+    background-color: #351925;
+}
+.rankings-update-time {
+	text-align: right;
+	font-size: 11px;
+	color: #ccc;
+	padding: 10px 0px;
+}
+.rankings_menu {
+	width: 100%;
+	overflow: auto;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.rankings_menu span {
+	width: 100%;
+	display: inline-block;
+	padding: 10px 0px;
+	color: #ccc;
+	font-size: 24px;
+}
+.rankings_menu a {
+    height: 28px;
+    color: #fff;
+    width: 120px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    background: url(../img/button_medium.jpg) no-repeat;
+    position: relative;
+    transition: .2s all ease;
+    line-height: 25px;
+    text-decoration: none;
+    background-position-y: -10px;
+    font-size: 13px !important;
+    margin: 3px;
+}
+.profiles_player_card table tr td {
+    text-align: center !important;
+    color: white;
+    border: 1px solid #888888;
+}
+button, .button { white-space: nowrap; }
+
+.rankings_menu a.active {
+	-webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
+
+.footer-logo {
+    width: 225px;
+    float: right;
+}
+.rankings_guild_logo tr td {
+	border: 0px !important;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.rankings-gens-img {
+	width: auto !important;
+	height: 30px !important;
+	border: 0 !important;
+	-moz-box-shadow: 0 0 0px #000 !important;
+	-webkit-box-shadow: 0 0 0px #000 !important;
+	box-shadow: 0 0 0px #000 !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+/* MY ACCOUNT MODULE */
+.myaccount-table {
+	width: 100%;
+        border: 1px solid #35222a;
+}
+
+.myaccount-table tr td:first-child {
+    color: #fff;
+    font-weight: normal !important;
+}
+.myaccount-table tr td {
+	padding: 15px !important;
+}
+
+.inside ul li img {
+    float: left;
+    position: relative;
+    left: 5rem;
+}
+.inside ul li {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: .5rem;
+    height: 41px;
+    transition: .2s all ease;
+    padding-top: 1rem !important;
+}
+.inside ul li:hover {
+    background-color: #0d0615;
+    border-bottom: 1px solid #044f37;
+    box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.45);
+    height: 41px;
+    margin: 0px -40px 0px -40px;
+    padding: 0px 25px 0px 25px;
+    color: #00ffae;
+    position: relative;
+    z-index: 5;
+    padding-top: 1rem;
+}
+.inside ul {
+    padding: 5px;
+}
+.myaccount-table tr:last-child td {
+    color: #fff;
+    font-weight: normal !important;
+}
+
+
+/* GENERAL TABLE UI */
+.general-table-ui {
+	width: 100%;
+	table-layout: fixed;
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+	margin: 10px 0px;
+}
+.general-table-ui tr td {
+	padding: 5px;
+	vertical-align: middle !important;
+}
+.general-table-ui tr:first-child td {
+	color: white;
+}
+
+table tr td img[data-toggle="tooltip"] {
+    border-radius: 25%;
+}
+
+.general-table-ui tr td {
+    border: 1px solid #42290a !important;
+}
+
+.general-table-ui tr td {
+	text-align: center;
+}
+.general-table-ui img {
+	width: 50px;
+	height: auto;
+	-moz-box-shadow: 0 0 5px #666;
+	-webkit-box-shadow: 0 0 5px #666;
+	box-shadow: 0 0 5px #666;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/* TERMS OF SERVICE PAGE */
+.tos_list li {
+	color: #aa0000;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+.tos_list li p {
+	color: #444;
+	text-align: justify;
+	text-justify: inter-word;
+	text-transform: none;
+	padding-right: 35px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.block-players.widget-fon.widget-fon-discussions {
+    padding-right: 0px;
+    padding-left: 550px;
+}
+
+.block-players.widget-fon.widget-fon-discussions .top-block li:hover {
+    background-color: #0d0615;
+    border-bottom: 1px solid #044f37;
+    box-shadow: 0px 8px 10px -3px rgba(0, 0, 0, 0.45);
+    height: 41px;
+    margin: 0px -55px 0px -40px;
+    padding: 0px 25px 0px 25px;
+    color: #00ffae;
+    position: relative;
+    z-index: 5;
+}
+
+.block-players.widget-fon.block-players-left {
+    padding-right: 35px;
+    padding-left: 350px;
+    text-align: center;
+}
+
+.block-players.widget-fon-guilds.widget-fon-guilds-right {
+    text-align: center;
+}
+
+.block-players.widget-fon-guilds-1.widget-fon-guilds-right-1 {
+    text-align: center;
+}
+
+.block-players.widget-fon.widget-fon-discussions .top-block li span { width: 100%; }
+.block-players.widget-fon.widget-fon-discussions .top-block li {
+    text-align: center;
+    height: 41px;
+    transition: .2s all ease;
+}
+
+time {
+    padding-left: 5px;
+}
+
+/* PAYPAL */
+.paypal-gateway-container {
+	width: 100%;
+}
+
+.paypal-gateway-content {
+	background: #fef2da;
+	border: 3px solid #f79433;
+	padding: 15px;
+	overflow: auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.paypal-gateway-logo {
+	width: 100%;
+	height: 68px;
+	background: #fff9ec url('../img/paypal-logo-200-68.png') no-repeat center;
+	background-size: contain;
+	margin-bottom: 15px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.paypal-gateway-conversion-rate {
+	margin: 0px auto;
+	text-align: center;
+	color: #000;
+	font-size: 18px;
+	padding: 10px 0px;
+}
+
+.paypal-gateway-form {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.paypal-gateway-form div {
+	display: inline-block;
+	padding: 0px 10px;
+	color: #000;
+	font-size: 18px;
+}
+
+.paypal-gateway-form input[type=text] {
+	width: 60px;
+	font-size: 18px;
+	border: 3px solid #f79433;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #f79433;
+}
+
+.paypal-gateway-continue {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.paypal-gateway-continue input[type=submit] {
+	background: url('../img/paypal-submit5e1f.jpg?v=2') no-repeat;
+	width: 200px;
+	height: 40px;
+	border: 0px;
+}
+
+.module-requirements {
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+/* SIDEBAR */
+.panel-sidebar {
+	background: #f1f1f1;
+	border: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 0 10px #e3e3e3;
+	-webkit-box-shadow: 0 0 10px #e3e3e3;
+	box-shadow: 0 0 10px #e3e3e3;
+}
+
+.panel-sidebar > .panel-heading {
+	background: #fff;
+	color: #ff0000;
+	border: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	border-bottom: 3px solid #ff0000;
+}
+
+.panel-usercp {
+	background: url('../img/usercp_bg.html') no-repeat top center;
+	background-size: cover;
+}
+
+.panel-usercp ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.panel-usercp ul li {
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+.panel-usercp ul li a {
+	color: #fff !important;
+}
+.panel-usercp ul li a:active, .panel-usercp ul li a:hover {
+	color: #ff0000 !important;
+}
+
+.panel-usercp ul li img {
+	position: relative;
+	top: -2px;
+	padding-right: 10px;
+}
+
+.sidebar-banner {
+	margin: 20px 0px;
+	border: 0px;
+}
+
+.sidebar-banner img {
+	-moz-box-shadow: 0 0 10px #e3e3e3;
+	-webkit-box-shadow: 0 0 10px #e3e3e3;
+	box-shadow: 0 0 10px #e3e3e3;
+	border: 0px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+
+/* GENERAL PANEL STYLING */
+.panel-general {
+	margin-bottom: 30px;
+	background: #f1f1f1;
+	border: 1px solid #42290a;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: #fff;
+}
+
+.panel {
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+.panel-body p {
+    color: #fff;
+    margin-bottom: 3.5rem;
+}
+
+.panel-news .panel-heading {
+    background: transparent;
+}
+
+.panel-news .panel-footer {
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.panel-body .panel-title {
+	font-size: 17px;
+	border-bottom: 1px solid #42290a;
+	margin-bottom: 20px !important;
+	font-weight: bold;
+}
+
+/* ADD STATS MODULE */
+.panel-addstats {
+	margin-bottom: 30px;
+/*	background: #25160f;*/
+	background: #351925;
+	border: 1px solid #42290a;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: #fff;
+}
+.panel-addstats .character-avatar img {
+	width: 100px;
+	height: auto;
+	-moz-box-shadow: 0 0 5px #666;
+	-webkit-box-shadow: 0 0 5px #666;
+	box-shadow: 0 0 5px #666;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.panel-addstats .character-name {
+	font-size: 18px;
+	border-bottom: 1px solid #e3e3e3;
+	padding: 20px 0px;
+	margin-bottom: 20px !important;
+	font-weight: bold;
+}
+
+/* DOWNLOADS */
+.panel-downloads {
+	margin-bottom: 30px;
+	background: #211422;
+	border: 1px solid #42290a;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: #fff;
+}
+	.download-description {
+		font-size: 14px;
+		position: relative;
+/*		top: -7px;*/
+		top: -3px;
+		color: #777;
+	}
+
+.online-status-indicator {
+	margin-left: 5px;
+}
+
+/* WEBENGINE CMS */
+.webengine-powered { color: #777 !important; }
+.webengine-powered:active, .webengine-powered:hover { color: #ff3214 !important; }
+
+/* MY ACCOUNT CHARACTER LIST */
+.myaccount-character-block {
+	background: #333;
+	border: 1px solid #666;
+	padding: 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 0px auto;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+	.myaccount-character-block img {
+		width: 100px;
+		height: auto;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-moz-box-shadow: 0 0 5px #000;
+		-webkit-box-shadow: 0 0 5px #000;
+		box-shadow: 0 0 5px #000;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+		.myaccount-character-block img:hover {
+			-webkit-filter: brightness(120%);
+			filter: brightness(120%);
+		}
+.myaccount-character-block-location {
+	font-size: 12px;
+	margin-bottom: 20px;
+	margin-top: 2px;
+	line-height: 1.2;
+}
+.myaccount-character-block-level {
+	position: relative;
+	top: -77px;
+	display: inline-block;
+	background: rgba(0,0,0,0.5);
+	padding: 0px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 10px;
+}
+.myaccount-character-name a {
+	font-weight: bold;
+	font-size: 16px;
+}

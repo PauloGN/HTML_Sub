@@ -1,0 +1,168 @@
+/* LOTTERY PLUGIN CSS */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.lottery-container {
+	background: #000 url('../img/lottery/lottery_bg.jpg') no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	min-height: 700px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+	-moz-box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+	box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+	margin-bottom: 20px;
+}
+
+	.lottery-container > .lottery-container-menu {
+		background: #000 url('../img/lottery/lottery_bg.jpg') no-repeat top center;
+		background-size: cover;
+		-webkit-box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+		-moz-box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+		box-shadow: 0px 0px 10px #000000, inset 0px 0px 62px 14px #000000;
+		text-align: center;
+	}
+	
+		.lottery-container > .lottery-container-menu ul {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.lottery-container > .lottery-container-menu ul li {
+			display: inline-block;
+			margin: 0px 20px;
+		}
+		
+		.lottery-container > .lottery-container-menu ul li a {
+			display: inline-block;
+			padding: 20px 0px;
+			color: #fff;
+			font-size: 16px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		
+		.lottery-container > .lottery-container-menu ul li a:active, .lottery-container > .lottery-container-menu ul li a:hover {
+			color: #ffcc00 !important;
+		}
+		
+	.lottery-container > .lottery-container-head {
+		background: url('../img/lottery/lottery_head.png') no-repeat;
+		width: 462px;
+		height: 162px;
+		margin: 40px auto 60px auto;
+	}
+	
+	.lottery-container > .lottery-container-content, .lottery-container > .lottery-container-content-history, .lottery-container > .lottery-container-content-results {
+		padding: 20px;
+	}
+	
+	.lottery-container > .lottery-container-content-stash {
+		padding: 20px;
+		text-align: center;
+		font-size: 18px;
+		color: #ccc;
+	}
+	
+	.lottery-container > .lottery-container-content-history > .ticket-history-title, .lottery-container > .lottery-container-content-results > .lottery-results-title {
+		font-size: 18px;
+		text-align: center;
+		color: #ffcc00;
+	}
+
+	.lottery-container > .lottery-container-content-history table, .lottery-container > .lottery-container-content-results table {
+		width: 80%;
+		margin: 10px auto 50px auto;
+		color: #ccc;
+	}
+
+	.lottery-container > .lottery-container-jackpot {
+		margin: 20px auto;
+		text-align: center;
+	}
+
+		.lottery-container > .lottery-container-jackpot > span.jackpot-title-txt {
+			font-size: 30px;
+			color: #ccc;
+			text-transform: uppercase;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+
+		.lottery-container > .lottery-container-jackpot > span.jackpot-txt {
+			font-size: 120px;
+			color: #4fbbef;
+			font-weight: bold;
+			position: relative;
+			top: -35px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		
+		.lottery-container > .lottery-container-jackpot > span.jackpot-credits-txt {
+			font-size: 30px;
+			color: #ccc;
+			position: relative;
+			top: -65px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+	
+	.lottery-container-numbers {
+		background: url('../img/lottery/lottery_balls.png') no-repeat;
+		width: 564px;
+		height: 142px;
+		margin: 0px auto;
+	}
+		.lottery-container-number {
+			float: left;
+			width: 141px;
+			text-align: center;
+			color: #000;
+			font-size: 50px;
+			font-weight: bold;
+/*			padding-top: 26px;*/
+			padding-top: 46px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+	
+	.lottery-container-buyticket {
+		padding: 50px 0px;
+		text-align: center;
+	}
+
+.lottery-ticket {
+	width: 250px;
+	background: #f1f1f1;
+	color: #000;
+	border: 2px dashed #F5ABAB;
+	margin: 0px auto;
+	text-align: center;
+	padding: 15px 0px;
+}
+	.lottery-ticket span.title {
+		font-size: 24pt;
+		color: #aa0000;
+	}
+	.lottery-ticket ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 10px;
+		text-align: center;
+	}
+		.lottery-ticket ul li {
+			display: inline-block;
+			background: #eee;
+			border: 1px dashed #770000;
+			text-align: center;
+			width: 30px;
+			padding: 5px 0px;
+			margin: 5px;
+			cursor: pointer;
+		}
+		
+		.lottery-selected-number {
+			color: #ff0000 !important;
+			border-color: #ff0000 !important;
+			background: #DBDBDB !important;
+		}
+
+.lottery-buyticket-submit {
+	margin: 15px;
+}

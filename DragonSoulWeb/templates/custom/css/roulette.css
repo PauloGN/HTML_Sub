@@ -1,0 +1,193 @@
+.btn-roulette {
+    color: #ffffff;
+    background-color: #9043e6;
+	border-color: #9043e6;
+	-moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.btn-roulette:active, .btn-roulette:focus, .btn-roulette:hover {
+    color: #fff !important;
+    background-color: #9043e6 !important;
+	border-color: #9043e6 !important;
+	-webkit-filter: brightness(120%);
+	filter: brightness(120%);
+}
+
+.roulette-ticket {
+	background: #e9e9e9 url('../img/roulette/ticket_bg.jpg');
+	background-size: cover;
+	width: 250px;
+	border: 2px solid #cca6f6;
+	margin: 30px auto;
+	padding-bottom: 20px;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+	.roulette-ticket:hover {
+		border-color: #b078ef;
+	}
+
+	.roulette-ticket > .roulette-ticket-title {
+		color: #9043e6;
+		font-size: 22px;
+		text-align: center;
+		padding: 20px 0px;
+		font-weight: bold;
+	}
+	
+	.roulette-ticket > .roulette-ticket-info {
+		
+	}
+	
+		.roulette-ticket > .roulette-ticket-info > .roulette-ticket-info-block {
+			text-align: center;
+			padding: 10px 30px;
+		}
+	
+		.roulette-ticket > .roulette-ticket-info > .free-spins.roulette-ticket-info-block {
+			color: #9043e6;
+		}
+
+/* ROULETTE SPIN CSS */
+
+.wheelContainer {
+	width: 100%;
+	background: #3c1554 url('../img/roulette/roulette-bg.jpg');
+	background-size: cover;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -khtml-border-radius: 10px;
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	padding: 50px 0px;
+}
+
+.wheelSVG {
+	position: relative;
+	visibility: hidden;
+	overflow: visible;
+}
+
+.peg {
+	visibility:hidden;
+}
+
+.wheelOutline, .valueContainer, .toast, .centerCircle {
+	pointer-events:none;
+}
+
+.wheelText {
+	pointer-events:none;
+	text-anchor:middle;
+	font-family:'Fjalla One', Arial, sans-serif;
+	-webkit-user-select: none;
+	user-select:none;
+}
+
+.toast {
+	position: absolute;
+	background-color: #2b0b3f;
+	border-radius: 12px;
+	opacity: 0;
+	text-align: center;
+}
+
+.toast p {
+	clear: both;
+	font-family:'Fjalla One', Arial, sand-serif;
+	margin:23px;
+	font-size:24px;
+	color:#ededed;
+	letter-spacing:-0px;
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;     
+	user-select: none;  
+	line-height:32px;
+	-webkit-transition: font-size .2s ease;
+	transition: font-size .2s ease; 
+	-webkit-transition: line-height .2s ease;
+	transition: line-height .2s ease; 
+}
+
+.roulette-title {
+	text-align: center;
+}
+	.roulette-title img {
+		width: 90%;
+		height: auto;
+	}
+
+.roulette-info {
+	text-align: center;
+}
+	.roulette-info p {
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 24px;
+	}
+	
+
+/* RAINBOW TEXT */
+.rainbow {
+	/* Font options */
+	/*text-shadow: 2px 2px 4px #000000;*/
+
+	/* Chrome, Safari, Opera */
+	-webkit-animation: rainbow 1s infinite; 
+
+	/* Internet Explorer */
+	-ms-animation: rainbow 1s infinite;
+
+	/* Standar Syntax */
+	animation: rainbow 1s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	0%{color: #ffffff;}	
+	25%{color: #00deff;}
+	50%{color: #93ff7a;}
+	75%{color: #fff17a;}
+	100%{color: #ffffff;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	0%{color: #ffffff;}	
+	25%{color: #00deff;}
+	50%{color: #93ff7a;}
+	75%{color: #fff17a;}
+	100%{color: #ffffff;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	0%{color: #ffffff;}	
+	25%{color: #00deff;}
+	50%{color: #93ff7a;}
+	75%{color: #fff17a;}
+	100%{color: #ffffff;}
+}
+
+.roulette-ticket-info .roulette-ticket-info-block {
+	color: #000;
+}

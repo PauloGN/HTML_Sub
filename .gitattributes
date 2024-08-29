@@ -1,0 +1,23 @@
+# Handling HTML files (text)
+*.html text
+*.html diff=html
+*.html eol=lf
+*.html merge=union
+
+# Handling image files (binary)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# Avoid diffing binary files (not useful for images)
+*.png -diff
+*.jpg -diff
+*.jpeg -diff
+*.gif -diff
+
+# Ensure no automatic conversion of line endings for binary files
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
