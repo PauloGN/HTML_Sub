@@ -125,7 +125,7 @@
 							<a href="infos.html"><div class="more-btn-small" style="margin: 0 auto;">SAIBA MAIS</div></a>
 						</div>
 						<div class="border-left-small-bottom"></div>				</div>
-								<br><br>
+				<br><br>
 				<br><br>
 				<div class="content last-news-left-small flex-s-c">
 					<div class="panel-body">
@@ -137,7 +137,7 @@
 							<div class="g-ytsubscribe" data-channelid="UCms6XhfhM1r1PlQCO39C7iw" data-layout="default" data-count="hidden"></div>
 						</div>
 						<br>
-						<a href="https://discord.gg/MWBpZGpeZg" target="_blank"><img src="templates/custom/img/midia-discord.png" width="180" height="58" alt=""></a>
+						<a href="https://discord.gg/zaXHgXGd" target="_blank"><img src="templates/custom/img/midia-discord.png" width="180" height="58" alt=""></a>
 						<br><br>
 						<script src="../apis.google.com/js/platform.js"></script>
 						<div style="text-align: center;">
@@ -196,7 +196,28 @@ Contamos com todos vocês, venham escrever a história de vocês em nosso servid
 <br>
 <br>
 <br>
-</div><div class="panel-footer"><div class="col-xs-6 nopadding"></div><div class="col-xs-6 nopadding text-right">Terça-Feira, 21 de Junho de 2022</div></div></div>					</div>
+</div><div class="panel-footer"><div class="col-xs-6 nopadding"></div><div class="col-xs-6 nopadding text-right">
+    <div id="currentDateTime"></div>
+</div>
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const options = { 
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+            hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, 
+            timeZone: 'America/Sao_Paulo'
+        };
+        const formattedDate = now.toLocaleString('pt-BR', options);
+        document.getElementById('currentDateTime').innerHTML = formattedDate;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Call function on page load
+    updateDateTime();
+</script>
+ </div></div>					</div>
 					<div class="border-small-bottom"></div>
 				</div>
 			</div>
@@ -422,12 +443,12 @@ Contamos com todos vocês, venham escrever a história de vocês em nosso servid
 			</div>
 		<div class="bottom-footer">
 			<div class="info-copyright">
-				<p>Copyright 2022 &copy; <a href="index.html" style="color: #f4b7fb;">Perfect World PlayUP</a></p>
+				<p>Copyright 2024 &copy; <a href="index.html" style="color: #ff4500;">Perfect World Dragon Soul</a></p>
 			</div>
 			<a class="footer-logo bright" href="index.html">
 				<img src="templates/custom/img/logo-small.png" alt="">
 			</a>
-			<p>Powered by DevPwPlayUP</p>
+			<p>Powered by Dragon Soul</p>
 		</div>
 		</div>
 	</div>
