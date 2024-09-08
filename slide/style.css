@@ -1,0 +1,10 @@
+html 	{ overflow: hidden; }
+* 		{ margin: 0; padding: 0; list-style: none; }
+ol		{ line-height: 22px; width: 410px; }
+ol a	{ color: #ffffff; }
+span  	{ color: #acacac; padding-right: 10px; }
+body    {margin: 0px; padding: 0px; oveflow:hidden;}
+banners img     { border: none; width: 660px; height: 317px; }
+#banner_thumbs	{ float: left; left: 350px; position: relative; }
+#banner_thumbs li { position: relative; top: -30px; float: left;  margin: 0px 5px; }
+#banner_thumbs li img { height: 17px; width: 17px; }
