@@ -172,11 +172,13 @@
 				<div class="content last-news-small flex-s-c" style="height: 100%; padding-bottom: 10px;">
 					<div class="border-small"></div>
 					<div style="width: 95%;">
-						<div class="page-title"><span>Área de Downloads</span></div><div class="panel panel-downloads"><div class="panel-body"><div class="panel-title">Cliente Completo e Patcher de Conexão</div><table class="table">
+						<div class="page-title"><span>Área de Downloads</span></div><div class="panel panel-downloads"><div class="panel-body">
+  <div class="panel-title">Cliente Completo e Patcher de Conexão - 
+    <span style="font-size: smaller; font-style: italic;">Resolução padrão 800x600 modo janela</span>
+  </div><table class="table">
+			<tr style="height: 55px;"><td style="width: 60%; vertical-align: middle; font-size: 16px !important;">&nbsp;&nbsp;Cliente Completo (Drive 1)<br /></td><td style="width: 20%; vertical-align: middle;" class="text-center">12 GB</td><td style="width: 20%; vertical-align: middle;" class="text-center"><a href="https://drive.google.com/file/d/1j5M2KJwLE4EKdkzNdlA_DoIUBcYxxZuZ/view?usp=sharing" class="button-small" target="_blank">Download</a></td></tr>
 			
-			<tr style="height: 55px;"><td style="width: 60%; vertical-align: middle; font-size: 16px !important;">&nbsp;&nbsp;Cliente Completo (Drive 1)<br /></td><td style="width: 20%; vertical-align: middle;" class="text-center">12 GB</td><td style="width: 20%; vertical-align: middle;" class="text-center"><a href="https://drive.google.com/file/d/1OYDyBimEqeNAQUMskgnMKgjBo_VLCkpC/view?usp=sharing" class="button-small" target="_blank">Download</a></td></tr>
-			
-			<tr style="height: 55px;"><td style="width: 60%; vertical-align: middle; font-size: 16px !important;">&nbsp;&nbsp;Cliente Completo (Drive 2)<br /></td><td style="width: 20%; vertical-align: middle;" class="text-center">12 GB</td><td style="width: 20%; vertical-align: middle;" class="text-center"><a href="https://drive.google.com/file/d/1OYDyBimEqeNAQUMskgnMKgjBo_VLCkpC/view?usp=sharing" class="button-small" target="_blank">Download</a></td></tr>
+			<tr style="height: 55px;"><td style="width: 60%; vertical-align: middle; font-size: 16px !important;">&nbsp;&nbsp;Cliente Completo (Drive 2)<br /></td><td style="width: 20%; vertical-align: middle;" class="text-center">12 GB</td><td style="width: 20%; vertical-align: middle;" class="text-center"><a href="https://drive.google.com/file/d/1ExcJj6J3AncKFprGGXRuYsG9P0icxbrs/view?usp=sharing" class="button-small" target="_blank">Download</a></td></tr>
 			
 			<tr style="height: 55px;"><td style="width: 60%; vertical-align: middle; font-size: 16px !important;">&nbsp;&nbsp;Cliente Completo (Torrent 1)<br /></td><td style="width: 20%; vertical-align: middle;" class="text-center">12 GB</td><td style="width: 20%; vertical-align: middle;" class="text-center"><a href="http://45.180.224.155/baixar/PWDragonSoul_155.torrent" class="button-small" target="_blank">Download</a></td></tr>
 			
@@ -225,8 +227,8 @@
 				<div>
 					<h3>Drop's de Baús</h3>
 					<img src="templates/custom/img/drop-list-icon.png" alt="">
-					<p>Clique para saber os detalhes dos baús existentes no servidor e as porcentagens dos itens.</p>
-					<a class="more-btn" href="baus.html">VISUALIZAR</a>
+					<p>Detalhes dos baús existentes no servidor e as porcentagens dos itens.</p>
+					<a class="more-btn open_modal" href="#baus">VISUALIZAR</a>
 				</div>
 			</div>
 		</div>
@@ -434,19 +436,23 @@
         </div>
     </div>
 </div>
+<!--EVENTOS MODAL-->
 	<div id="timers" class="modal_div commonModal flex-c-c">
 		<span class="modal_close"></span>
 		<div class="modal-div"> 
 			<div class="border"></div>
 			<div class="modal_close"></div>
 			<div class="modalContent">
-				<h2 class="title">Horários de Eventos</h2>
+				<h2 class="title">Eventos em construção</h2>
 				<br>
 				<style>
 				.commonModal p, ul, li {
 					font-size: 16px;
 				}
 				</style>
+				<div>
+				  <p style="text-align: center; color:#ffcc00;">Os eventos listados estão em fase de teste. Horários e detalhes podem ser alterados sem aviso prévio.</p>
+				</div>
 				<div style="display: flex;">
 					<div style="margin: 5px; width: 465px; height: 590px;">
 						<div class="page-title" style="padding-top: 15px;">Eventos</div>
@@ -563,6 +569,63 @@
 		</div>
 	</div>
 	<div id="overlay"></div>
+<!--EVENTOS MODAL FIM-->
+<!--BAÚS MODAL-->
+<div id="baus" class="modal_div commonModal flex-c-c">
+    <span class="modal_close"></span>
+    <div class="modal-div"> 
+        <div class="border"></div>
+        <div class="modal_close"></div>
+        <div class="modalContent">
+            <h2 class="title">Baús Ativos e Drops</h2>
+            <br>
+            <style>
+            .commonModal p, ul, li {
+                font-size: 16px;
+            }
+            </style>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div class="bausContent" style="margin: 5px; width: 465px;">
+                    <div class="page-title" style="padding-top: 15px;">Baú Místico</div>
+                    <ul>
+                        <li>
+                            <span>Item 1</span>
+                            <span style="float: right; display: block; color:#ffcc00;">10% de chance</span>
+                        </li>
+                        <li>
+                            <span>Item 2</span>
+                            <span style="float: right; display: block; color:#ffcc00;">20% de chance</span>
+                        </li>
+                        <li>
+                            <span>Item 3</span>
+                            <span style="float: right; display: block; color:#ffcc00;">5% de chance</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bausContent" style="margin: 5px; width: 465px;">
+                    <div class="page-title" style="padding-top: 15px;">Baú da Sorte</div>
+                    <ul>
+                        <li>
+                            <span>Item A</span>
+                            <span style="float: right; display: block; color:#ffcc00;">15% de chance</span>
+                        </li>
+                        <li>
+                            <span>Item B</span>
+                            <span style="float: right; display: block; color:#ffcc00;">30% de chance</span>
+                        </li>
+                        <li>
+                            <span>Item C</span>
+                            <span style="float: right; display: block; color:#ffcc00;">8% de chance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+<!--BAÚS MODAL FIM-->
 	<script src="templates/custom/js/jquery.min.js"></script>
 	<script src="templates/custom/js/bootstrap.min.js"></script>
 	<script src="templates/custom/js/circle-js.js"></script>
