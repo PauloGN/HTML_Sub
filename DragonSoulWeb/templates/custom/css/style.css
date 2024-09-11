@@ -2849,47 +2849,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     margin-left: 30px;
 }
 
-.left-menu-div a {
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0px 30px;
-    font-weight: bold;
-    border-top: 2px solid rgba(0, 0, 0, 0);
-    margin: 0 24px;
-}
-
-.left-menu-div a:hover {
-    text-shadow: 0px 0px 27px #efcbe7;
-    color: #efcbe7;
-}
-
-.right-menu-div a {
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 35px 10px;
-    font-weight: bold;
-    border-top: 2px solid rgba(0, 0, 0, 0);
-    margin: 0 10px;
-}
-
-.right-menu-div a:hover {
-    text-shadow: 0px 0px 27px #efcbe7;
-    color: #efcbe7;
-}
-
-
-
+/*Inicio BARRA DE MENU*/
 .onlineBlock2 {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -608.5px;
+  transform: translateX(-50%); /* Centraliza o contêiner horizontalmente */
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Espaça os menus igualmente */
   width: 1200px;
   height: 233px;
   z-index: 10;
@@ -2898,6 +2865,34 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   transition: 0.3s;
 }
 
+.left-menu-div, .right-menu-div {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+.left-menu-div a, .right-menu-div a {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px; /* Ajuste o padding para evitar quebra de linha */
+  font-weight: bold;
+  border-top: 2px solid rgba(0, 0, 0, 0);
+  margin: 0 15px; /* Ajuste a margem para um espaçamento consistente */
+}
+
+.left-menu-div a:hover, .right-menu-div a:hover {
+  text-shadow: 0px 0px 27px #efcbe7;
+  color: #efcbe7;
+}
+
+/* Ajuste o padding e margin conforme necessário para o alinhamento correto */
+.right-menu-div a {
+  padding: 10px 20px; /* Ajuste o padding aqui também para consistência */
+  margin: 0 15px; /* Ajuste a margem aqui também */
+}
+
+/*FIM BARRADE MENU*/
 
 .modal-form input {
   color: #fff;
