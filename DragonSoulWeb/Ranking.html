@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ranking - DragonSoul</title>
+    <style>
+        /* Definindo o estilo global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            background: linear-gradient(-45deg, #ff4500, #ff8c00, #ffcc00, #8b0000);
+            background-size: 400% 400%;
+            animation: lavaFlow 10s ease infinite;
+            position: relative;
+        }
+
+        /* Animação do fundo imitando fogo/lava */
+        @keyframes lavaFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Cabeçalho simples com apenas texto */
+        header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Container para o conteúdo de ranking */
+        .ranking-container {
+            text-align: center;
+            background-color: rgba(46, 46, 46, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            max-width: 600px;
+            margin: 20px;
+            position: relative;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #ffcc00;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff4500, 0 0 30px #ff4500;
+        }
+
+        /* Parágrafo de descrição */
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        /* Botão "Em breve" estilizado */
+        .coming-soon {
+            background: linear-gradient(45deg, #ff4500, #ff8c00);
+            color: #1c1c1c;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        /* Efeito de hover no botão */
+        .coming-soon:hover {
+            background: linear-gradient(45deg, #ff8c00, #ff4500);
+            box-shadow: 0 0 20px #ff8c00, 0 0 30px #ff4500;
+            cursor: pointer;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com apenas texto -->
+    <header>
+        Ranking Em Breve
+    </header>
+
+    <!-- Container do conteúdo principal -->
+    <div class="ranking-container">
+        <h1>DragonSoul</h1>
+        <p>Em breve, o ranking dos maiores jogadores do <strong>DragonSoul</strong> estará disponível! Fique atento para ver sua posição nas batalhas PvE e PvP!</p>
+        <div class="coming-soon">Em Breve</div>
+    </div>
+
+    <!-- Rodapé com informações de copyright -->
+    <footer>
+        &copy; 2024 DragonSoul. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
