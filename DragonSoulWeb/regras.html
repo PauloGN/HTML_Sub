@@ -79,19 +79,6 @@
 					Just opened!</u>
 				</div>
 			</div>-->
-			<div class="buttons flex-s-c">
-				<a href="downloads.html" class="download flex">
-					<h2>Baixar agora</h2>
-					<p>Tamanho: 10GB</p>
-				</a>
-				<a href="https://discord.gg/4Sv3mbqvV7" class="login" target="_blank">
-					Discord
-				</a>
-				<a href="http://painel.pwdragonsoul.com.br/painel/cadastro/" class="register flex" target="_blank">
-					<h2>Criar conta</h2>
-					<p>Jogue grátis!</p>
-				</a>
-			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -134,7 +121,9 @@
 								</tr>
 							</table>
 							<br>
-							<a href="infos.html"><div class="more-btn-small" style="margin: 0 auto;">SAIBA MAIS</div></a>
+							<a href="#saibamais" class="open_modal">
+							    <div class="more-btn-small" style="margin: 0 auto;">SAIBA MAIS</div>
+							</a>
 						</div>
 						<div class="border-left-small-bottom"></div>				</div>
 								<br><br>
@@ -288,5 +277,42 @@ Aviso: A compra, venda, troca de itens por moeda real é terminantemente proibid
 <script>MuEvents.init('01:57:37');</script>
 <script src="templates/custom/js/fireworks.js"></script>
 <script src="templates/custom/js/countdown.js" id="countdown_timer" data-time="2022/06/04 01:57:37"></script>
+<!--INFORMAÇÕES DO SERVIDOR MODAL-->
+<div id="saibamais" class="modal_div commonModal flex-c-c">
+    <span class="modal_close"></span>
+    <div class="modal-div"> 
+        <div class="border"></div>
+        <div class="modal_close"></div>
+        <div class="modalContent">
+            <h2 class="title">Resumo do Servidor Dragon Soul</h2>
+            <br>
+            <style>
+            .commonModal p, ul, li {
+                font-size: 16px;
+            }
+            </style>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div class="serverContent" style="margin: 5px; width: 465px;">
+                    <div class="page-title" style="padding-top: 15px;">Informações Gerais</div>
+                    <ul>
+                        <li>Servidor Clássico: ver. 155</li>
+                        <li>Classes: até os Sombrio</li>
+                        <li>Missões Diárias: Exclusivas a partir do level 30</li>
+                        <li>Bolsa tática exclusiva forjada no ficha de presença.</li>
+                    </ul>
+                </div>
+                
+
+<div class="serverContent" style="margin: 5px; width: 465px;">
+    <div class="page-title" style="padding-top: 15px;">Informações</div>
+    <p>O servidor foi pensado para valorizar o farm e o tempo de jogo, apesar de manter as rates originais. Oferecemos ao player quests dinâmicas e itens para ajudar no progresso e evolução, baús a cada 5 níveis que trazem recompensas focadas no progresso e suporte ao jogador, amuletos e hierogramas, pedras de hiper XP, e uma bolsa tática para dar suporte à jogabilidade.</p>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+<!--INFORMAÇÕES DO SERVIDOR FIM-->
 </body>
 </html>
