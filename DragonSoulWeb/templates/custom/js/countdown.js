@@ -8,13 +8,11 @@
 
     "use strict";
 
-    var currentTime = new Date(document.getElementById("countdown_timer").getAttribute("data-time")).getTime();
-
     var Countdown = function (element, options) {
-            this.$element = $(element);
-            this.defaults = $.extend({}, Countdown.defaults, this.$element.data(), $.isPlainObject(options) ? options : {});
-            this.init();
-        };
+        this.$element = $(element);
+        this.defaults = $.extend({}, Countdown.defaults, this.$element.data(), $.isPlainObject(options) ? options : {});
+        this.init();
+    };
 
     Countdown.prototype = {
         constructor: Countdown,
@@ -44,43 +42,18 @@
             this.$daysLabel = $element.find("[data-days-label]");
             this.$hoursLabel = $element.find("[data-hours-label]");
 
-            if ((this.$days.length + this.$hours.length + this.$minutes.length + this.$seconds.length) > 0) {
-                this.found = true;
-            }
+            this.found = (this.$days.length + this.$hours.length + this.$minutes.length + this.$seconds.length) > 0;
         },
 
         reset: function () {
             if (this.found) {
                 this.output("days");
-                if(this.hours<10){
-                    this.output("hours10");
-                }
-                else {
-                    this.output("hours");
-                }
-                if(this.minutes<10){
-                    this.output("minutes10");
-                }
-                else {
-                    this.output("minutes");
-                }
-                if (this.seconds < 10) {
-                    this.output("seconds10");
-                }
-                else{
-                    this.output("seconds");
-                }
+                this.output(this.hours < 10 ? "hours10" : "hours");
+                this.output(this.minutes < 10 ? "minutes10" : "minutes");
+                this.output(this.seconds < 10 ? "seconds10" : "seconds");
 
-                if (this.days == 1) {
-                    this.output("daysLabel1");
-                } else {
-                    this.output("daysLabel");
-                }
-                if (this.hours == 1) {
-                    this.output("hoursLabel1");
-                } else {
-                    this.output("hoursLabel");
-                }
+                this.output(this.days === 1 ? "daysLabel1" : "daysLabel");
+                this.output(this.hours === 1 ? "hoursLabel1" : "hoursLabel");
             } else {
                 this.output();
             }
@@ -100,7 +73,7 @@
                 return false;
             }
 
-            diff = date.getTime() - currentTime; //(new Date()).getTime()
+            diff = date.getTime() - new Date().getTime();
 
             if (diff <= 0) {
                 this.end();
@@ -186,32 +159,17 @@
 
         update: function () {
             if (--this.seconds >= 0) {
-                if (this.seconds < 10){
-                    this.output("seconds10");
-                }
-                else {
-                    this.output("seconds");
-                }
+                this.output(this.seconds < 10 ? "seconds10" : "seconds");
             } else {
                 this.seconds = 59;
                 this.output("seconds");
                 if (--this.minutes >= 0) {
-                    if (this.minutes < 10){
-                        this.output("minutes10");
-                    }
-                    else {
-                        this.output("minutes");
-                    }
+                    this.output(this.minutes < 10 ? "minutes10" : "minutes");
                 } else {
                     this.minutes = 59;
                     this.output("minutes");
                     if (--this.hours >= 0) {
-                        if (this.hours < 10){
-                            this.output("hours10");
-                        }
-                        else {
-                            this.output("hours");
-                        }
+                        this.output(this.hours < 10 ? "hours10" : "hours");
                     } else {
                         this.hours = 23;
                         this.output("hours");
@@ -224,16 +182,8 @@
                 }
             }
 
-            if (this.hours == 1) {
-                this.output("hoursLabel1");
-            } else {
-                this.output("hoursLabel");
-            }
-            if (this.days == 1) {
-                this.output("daysLabel1");
-            } else {
-                this.output("daysLabel");
-            }
+            this.output(this.hours === 1 ? "hoursLabel1" : "hoursLabel");
+            this.output(this.days === 1 ? "daysLabel1" : "daysLabel");
         },
 
         output: function (type) {
@@ -249,7 +199,6 @@
                 case "seconds10":
                     this.$seconds.text("0" + this.seconds);
                     break;
-
                 case "seconds":
                     this.$seconds.text(this.seconds);
                     break;
@@ -265,11 +214,9 @@
                 case "hours":
                     this.$hours.text(this.hours);
                     break;
-
                 case "days":
                     this.$days.text(this.days);
                     break;
-
                 case "daysLabel1":
                     this.$daysLabel.text("DAY");
                     break;
@@ -287,10 +234,10 @@
 
         template: function () {
             return this.defaults.text
-                    .replace("%s", this.days)
-                    .replace("%s", this.hours)
-                    .replace("%s", this.minutes)
-                    .replace("%s", this.getSecondsText());
+                .replace("%s", this.days)
+                .replace("%s", this.hours)
+                .replace("%s", this.minutes)
+                .replace("%s", this.getSecondsText());
         },
 
         getSecondsText: function () {
@@ -330,6 +277,33 @@
 
     $(function () {
         $("[countdown]").countdown();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const countdownContainer = document.querySelector('.countdown-container');
+        const endDate = new Date(countdownContainer.getAttribute('data-date')).getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = endDate - now;
+
+            if (distance < 0) {
+                countdownContainer.innerHTML = "<div style='font-size: 22px; color: #f4b7fb;'>Countdown Finished!</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownContainer.querySelector('[data-days]').textContent = days;
+            countdownContainer.querySelector('[data-hours]').textContent = hours < 10 ? '0' + hours : hours;
+            countdownContainer.querySelector('[data-minutes]').textContent = minutes < 10 ? '0' + minutes : minutes;
+            countdownContainer.querySelector('[data-seconds]').textContent = seconds < 10 ? '0' + seconds : seconds;
+        };
+
+        setInterval(updateCountdown, 1000);
     });
 
 });

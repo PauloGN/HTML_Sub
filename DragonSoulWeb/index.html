@@ -28,6 +28,23 @@
 	<script>var baseUrl = 'index.html';</script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q401SQKHKF"></script>
 	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Q401SQKHKF');</script>
+	<!-- Meta Pixel Code -->
+		<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '934550415374592');
+		fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=934550415374592&ev=PageView&noscript=1"
+		/></noscript>
+	<!-- End Meta Pixel Code -->
 </head>
 <body>
 	<div class="smoke"></div>
@@ -58,29 +75,118 @@
 	<div class="container">
 		<div class="mainBlock block">
 			<a class="logo bright"><img src="templates/custom/img/blank.png" height="270" width="500"></a>
-<!--			<div class="countdown-container" style="margin-top: -70px;" countdown="" data-date="November 13 2021 15:00:00">
-				<div class="days-container">
-					<div class="days" data-days="">0</div>
-					<div class="days-label" data-days-label="">DAYS</div>
+			<!--CONTAGEM-->
+				<div class="countdown-container" style="margin-top: -70px;" countdown="" data-date="November 1, 2024 20:00:00">
+				    <div class="circle days-container">
+				        <div class="days" data-days="">0</div>
+				        <div class="days-label" data-days-label="">DAYS</div>
+				    </div>
+				    <div class="circle hours-container">
+				        <div class="hours" data-hours="">00</div>
+				        <div class="hours-label" data-hours-label="">HOURS</div>
+				    </div>
+				    <div class="circle minutes-container">
+				        <div class="minutes" data-minutes="">00</div>
+				        <div class="minutes-label">MIN</div>
+				    </div>
+				    <div class="circle seconds-container">
+				        <div class="seconds" data-seconds="">00</div>
+				        <div class="seconds-label">SEC</div>
+				    </div>
 				</div>
-				<div class="hours-container">
-					<div class="hours" data-hours="">00</div>
-					<div class="hours-label" data-hours-label="">HOURS</div>
+
+				<!-- Mensagem inicial "Faltam X dias para o lançamento!" -->
+				<div class="launch-message fire-glow" style="padding: 5px; background: rgba(20, 17, 24, 0.6); border-radius: 10px; text-align: center; margin-top: 20px; font-size: 22px; text-transform: uppercase;">
+				    Faltam <span class="days-left">0</span> dias para o lançamento!
 				</div>
-				<div class="minutes-container">
-					<div class="minutes" data-minutes="">00</div>
-					<div class="minutes-label">MIN</div>
+
+				<!-- Mensagem "Servidor aberto, divirtam-se!" -->
+				<div class="just-opened fire-glow" style="display: none; padding: 5px; background: rgba(20, 17, 24, 0.6); border-radius: 10px; text-align: center; margin-top: 20px; font-size: 22px; text-transform: uppercase;">
+				    Servidor aberto, divirtam-se!
 				</div>
-				<div class="seconds-container">
-					<div class="seconds" data-seconds="">00</div>
-					<div class="seconds-label">SEC</div>
-				</div>
-			</div>
-			<div style="padding: 5px 5px 5px 5px; background: rgb(20 17 24 / 60%); border-radius: 10px; text-align: center; margin-bottom: 70px;">
-				<div style="padding: 12px; font-size: 22px; color: #f4b7fb; text-transform: uppercase;">
-					Just opened!</u>
-				</div>
-			</div>-->
+
+				<style>
+				    .countdown-container {
+				        display: flex;
+				        gap: 15px;
+				        text-align: center;
+				        justify-content: center;
+				    }
+				    .circle {
+				        display: flex;
+				        flex-direction: column;
+				        align-items: center;
+				        justify-content: center;
+				        width: 90px;
+				        height: 90px;
+				        background: #28282e;
+				        border-radius: 50%;
+				        box-shadow: 0 0 15px rgba(255, 69, 0, 0.7), 0 0 25px rgba(255, 69, 0, 0.5);
+				        position: relative;
+				    }
+				    .circle::after {
+				        content: '';
+				        position: absolute;
+				        top: -5px;
+				        left: -5px;
+				        right: -5px;
+				        bottom: -5px;
+				        border-radius: 50%;
+				        box-shadow: 0 0 20px rgba(255, 120, 0, 0.5);
+				    }
+				    .days, .hours, .minutes, .seconds {
+				        font-size: 24px;
+				        font-weight: bold;
+				        color: #ff7d00;
+				    }
+				    .days-label, .hours-label, .minutes-label, .seconds-label {
+				        font-size: 12px;
+				        color: #ffb377;
+				    }
+				    /* Estilo do glow de fogo */
+				    .fire-glow {
+				        color: #ff7d00;
+				        text-shadow: 0 0 10px rgba(255, 69, 0, 0.7), 0 0 20px rgba(255, 120, 0, 0.7), 0 0 30px rgba(255, 69, 0, 0.5);
+				    }
+				</style>
+
+				<script>
+				document.addEventListener("DOMContentLoaded", function () {
+				    const countdownContainer = document.querySelector('.countdown-container');
+				    const endDate = new Date(countdownContainer.getAttribute('data-date')).getTime();
+				    const launchMessage = document.querySelector('.launch-message');
+				    const daysLeftMessage = document.querySelector('.days-left');
+				    const justOpenedMessage = document.querySelector('.just-opened');
+
+				    function updateCountdown() {
+				        const now = new Date().getTime();
+				        const distance = endDate - now;
+
+				        if (distance <= 0) {
+				            countdownContainer.style.display = "none";
+				            launchMessage.style.display = "none";
+				            justOpenedMessage.style.display = "block";
+				            return;
+				        }
+
+				        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				        countdownContainer.querySelector('[data-days]').textContent = days;
+				        countdownContainer.querySelector('[data-hours]').textContent = hours.toString().padStart(2, '0');
+				        countdownContainer.querySelector('[data-minutes]').textContent = minutes.toString().padStart(2, '0');
+				        countdownContainer.querySelector('[data-seconds]').textContent = seconds.toString().padStart(2, '0');
+				        
+				        // Atualiza a mensagem "Faltam X dias para o lançamento!"
+				        daysLeftMessage.textContent = days;
+				    }
+
+				    setInterval(updateCountdown, 1000);
+				});
+				</script>
+			<!--FIM CONTAGEM-->
 			</div>
 		</div>
 	</div>
@@ -160,58 +266,113 @@
 					</div>
 				</div>
 			</div>
-			<div class="right-content">
-				<div class="content last-news-small flex-s-c" style="height: 100%; padding-bottom: 10px;">
-					<div class="border-small"></div>
-					<div style="width: 95%;">
-						<div class="panel panel-news"><div class="page-title"><span>De um jogador, para uma comunidade épica</span></div>
-	<div class="panel-body" style="line-height: 1.6;">
-	<p>
-		<strong>DragonSoul</strong> resgata a verdadeira essência de <strong>Perfect World</strong>, um clássico imortal, mantendo a base original que conquistou tantos fãs. Nossa missão é oferecer um servidor <strong>confiável, estável e duradouro</strong>, onde você possa jogar com a certeza de que sua jornada será segura e contínua. Aqui, você não encontrará promessas vazias; o <strong>DragonSoul</strong> veio para ficar!<br><br>
 
-		Nosso servidor evoluirá, sim, mas sempre respeitando as raízes do jogo, sem mecânicas estranhas ou alterações que desviem da experiência autêntica. Você terá a chance de se envolver em <strong>batalhas épicas</strong>, tanto no PvE quanto no PvP, sabendo que a essência original será mantida.<br><br>
-
-		Prepare-se para uma aventura grandiosa e junte-se ao <strong>DragonSoul</strong>! Aqui, você não será apenas um jogador – você se tornará uma <strong>lenda</strong>.
-	</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div><div class="panel-footer"><div class="col-xs-6 nopadding"></div><div class="col-xs-6 nopadding text-right">
-    <div id="currentDateTime"></div>
-</div>
-<script>
-    function updateDateTime() {
-        const now = new Date();
-        const options = { 
-            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-            hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, 
-            timeZone: 'America/Sao_Paulo'
-        };
-        const formattedDate = now.toLocaleString('pt-BR', options);
-        document.getElementById('currentDateTime').innerHTML = formattedDate;
+			<!-- Bloco de info -->
+			<!-- Bloco de Informações e Mensagem de Boas-vindas -->
+<style>
+    @keyframes pulsar {
+        0% {
+            transform: scale(1);
+            background-color: rgba(255, 0, 0, 0.8); /* Cor do fundo estilo lava (vermelho) */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
+        50% {
+            transform: scale(1.01);
+            background-color: rgba(255, 140, 0, 0.9); /* Cor mais clara (laranja) */
+            box-shadow: 0 0 30px rgba(255, 140, 0, 0.9);
+        }
+        100% {
+            transform: scale(1);
+            background-color: rgba(255, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        }
     }
 
-    // Update date and time every second
-    setInterval(updateDateTime, 1000);
+    .mensagem-destaque {
+        animation: pulsar 1.5s infinite; /* Pulsação contínua */
+        border: 2px solid #FFD700; /* Cor da borda dourada */
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        color: #FFF; /* Cor do texto */
+    }
 
-    // Call function on page load
-    updateDateTime();
-</script>
- </div></div>					</div>
-					<div class="border-small-bottom"></div>
-				</div>
-			</div>
+    .glow-text {
+        color: #FFD700; /* Cor do texto em dourado */
+        text-shadow: 0 0 10px rgba(255, 140, 0, 1), 0 0 20px rgba(255, 140, 0, 0.8), 0 0 30px rgba(255, 0, 0, 1); /* Efeito glow */
+    }
+</style>
+
+<div class="right-content">
+    <div class="content last-news-small flex-s-c" style="height: 100%; padding-bottom: 10px;">
+        <div class="border-small"></div>
+        
+        <div style="width: 95%;">
+            <div class="panel panel-news">
+                <div class="page-title">
+                    <span>De um jogador, para uma comunidade épica</span>
+                </div>
+
+                <div class="panel-body" style="line-height: 1.6;">
+                    <div class="mensagem-destaque">
+                        <strong>Olá, Sábios Mestres e Aprendizes!!</strong><br><br>
+                        Agradecemos a todos os jogadores que participaram do período de testes do <strong>Dragon Soul</strong> e ajudaram a tornar esse início um sucesso!<br><br>
+
+                        <span class="glow-text"><strong>De acordo com fontes confiáveis, Regen Kjord informa:</strong></span><br>
+                        Para os preparativos finais, o servidor estará fechado nos dias 30 e 31, reabrindo em 1º de novembro, às 20h. Queremos garantir a melhor experiência possível para o lançamento oficial.<br><br>
+
+                        Como anunciado, as contas de teste não serão resetadas e o progresso ficará salvo. Além disso, como agradecimento especial, todas as contas criadas nesse período receberão 100 Gold de Evento.<br><br>
+
+                        Aproveitem os dias 28 e 29, pois ainda estaremos online! Contamos com vocês para dar as boas-vindas aos novos aventureiros que em breve se juntarão à jornada.<br><br>
+
+                        <strong>A Alma do Dragão aguarda.</strong>
+                    </div>
+
+                    <p>
+                        <strong>DragonSoul</strong> resgata a verdadeira essência de <strong>Perfect World</strong>, um clássico imortal, mantendo a base original que conquistou tantos fãs. Nossa missão é oferecer um servidor <strong>confiável, estável e duradouro</strong>, onde você possa jogar com a certeza de que sua jornada será segura e contínua. Aqui, você não encontrará promessas vazias; o <strong>DragonSoul</strong> veio para ficar!<br><br>
+
+                        Nosso servidor evoluirá, sim, mas sempre respeitando as raízes do jogo, sem mecânicas estranhas ou alterações que desviem da experiência autêntica. Você terá a chance de se envolver em <strong>batalhas épicas</strong>, tanto no PvE quanto no PvP, sabendo que a essência original será mantida.<br><br>
+
+                        Prepare-se para uma aventura grandiosa e junte-se ao <strong>DragonSoul</strong>! Aqui, você não será apenas um jogador – você se tornará uma <strong>lenda</strong>.
+                    </p>
+                </div>
+
+                <div class="panel-footer">
+                    <div class="col-xs-6 nopadding"></div>
+                    <div class="col-xs-6 nopadding text-right">
+                        <div id="currentDateTime"></div>
+                    </div>
+
+                    <script>
+                        function updateDateTime() {
+                            const now = new Date();
+                            const options = { 
+                                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                                hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, 
+                                timeZone: 'America/Sao_Paulo'
+                            };
+                            const formattedDate = now.toLocaleString('pt-BR', options);
+                            document.getElementById('currentDateTime').innerHTML = formattedDate;
+                        }
+
+                        // Update date and time every second
+                        setInterval(updateDateTime, 1000);
+
+                        // Call function on page load
+                        updateDateTime();
+                    </script>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-small-bottom"></div>
+    </div>
+</div>
+
+			<!-- Fim Bloco de Informações e Mensagem de Boas-vindas -->
 		</div>
 	</div>
+	<!-- Fim Bloco de info-->
 	<div class="container">
 		<div class="game-infoBlock block">
 			<div class="title-block">
